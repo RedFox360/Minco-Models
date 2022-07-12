@@ -55,7 +55,4 @@ const serverSchema = new Schema<ServerData>({
 	}
 });
 
-// typo I just realized this :(
-const serverModel = model<ServerData>('SeverModels', serverSchema);
-
-export default serverModel;
+export default serverSchema;

@@ -52,6 +52,4 @@ const serverSchema = new mongoose_1.Schema({
         default: 'America/Los_Angeles'
     }
 });
-// typo I just realized this :(
-const serverModel = (0, mongoose_1.model)('SeverModels', serverSchema);
-exports.default = serverModel;
+exports.default = serverSchema;

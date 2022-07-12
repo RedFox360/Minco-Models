@@ -34,5 +34,4 @@ const profileInServerSchema = new mongoose_1.Schema({
     bannedFromConfessions: { type: Boolean, default: false },
     logs: [logSchema]
 });
-const profileInServerModel = (0, mongoose_1.model)('guildProfileModel', profileInServerSchema);
-exports.default = profileInServerModel;
+exports.default = profileInServerSchema;

@@ -58,5 +58,4 @@ const profileSchema = new mongoose_1.Schema({
         xp: { type: Number, default: 0 }
     }
 });
-const profileModel = (0, mongoose_1.model)('ProfileModels', profileSchema);
-exports.default = profileModel;
+exports.default = profileSchema;

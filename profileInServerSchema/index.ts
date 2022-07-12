@@ -42,9 +42,4 @@ const profileInServerSchema = new Schema<ProfileInServer>({
 	logs: [logSchema]
 });
 
-const profileInServerModel = model<ProfileInServer>(
-	'guildProfileModel',
-	profileInServerSchema
-);
-
-export default profileInServerModel;
+export default profileInServerSchema;
