@@ -1,7 +1,7 @@
 import profileSchema from './profileSchema';
 import serverSchema from './serverSchema';
 import profileInServerSchema from './profileInServerSchema';
-import { Model, Mongoose } from 'mongoose';
+import { Connection, Model } from 'mongoose';
 import { Profile } from './profileSchema/types';
 import { ServerData } from './serverSchema/types';
 import { ProfileInServer } from './profileInServerSchema/types';
@@ -16,7 +16,7 @@ export default class ModelClient {
 		any
 	>;
 
-	constructor(public connection: Mongoose) {
+	constructor(public connection: Connection) {
 		this.profileModel = connection.model(
 			'ProfileModels',
 			profileSchema
