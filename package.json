@@ -2,7 +2,7 @@
   "name": "minco-models",
   "version": "1.0.0",
   "description": "Minco Penguin models",
-  "main": "main.ts",
+  "main": "main.js",
   "author": "Sameer Prakash",
   "license": "MIT",
   "dependencies": {
