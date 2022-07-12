@@ -1,0 +1,11 @@
+{
+  "name": "minco-models",
+  "version": "1.0.0",
+  "description": "Minco Penguin models",
+  "main": "main.ts",
+  "author": "Sameer Prakash",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^6.4.4"
+  }
+}
