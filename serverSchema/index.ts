@@ -42,6 +42,10 @@ const serverSchema = new Schema<ServerData>({
 	mainLogChannelId: String,
 	messageLogChannelWebhookId: String,
 	mainLogChannelWebhookId: String,
+	globalXpMultipler: {
+		type: Number,
+		default: 0.65
+	},
 	starboard: {
 		channelID: String,
 		starAmount: { type: Number, default: 1 },

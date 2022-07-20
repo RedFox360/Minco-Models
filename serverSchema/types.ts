@@ -29,6 +29,7 @@ export interface ServerData {
 	currentCaseNo: number;
 	clean: boolean;
 	timezone: string;
+	globalXpMultipler: number;
 	starboard?: {
 		channelID?: string;
 		starAmount: number;

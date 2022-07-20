@@ -39,7 +39,11 @@ const profileInServerSchema = new Schema<ProfileInServer>({
 	isShadowBanned: { type: Boolean, default: false },
 	bannedFromCommands: { type: Boolean, default: false },
 	bannedFromConfessions: { type: Boolean, default: false },
-	logs: [logSchema]
+	logs: [logSchema],
+	xp: {
+		type: Number,
+		default: 0
+	}
 });
 
 export default profileInServerSchema;

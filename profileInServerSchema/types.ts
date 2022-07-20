@@ -6,6 +6,7 @@ export interface ProfileInServer {
 	bannedFromCommands: boolean;
 	bannedFromConfessions: boolean;
 	logs?: Log[];
+	xp: number;
 }
 
 export interface Log {
