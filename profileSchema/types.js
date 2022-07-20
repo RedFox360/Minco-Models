@@ -1,0 +1,35 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.rodArray = void 0;
+exports.rodArray = [
+    'wooden',
+    'bone',
+    'candle',
+    'copper',
+    'steel',
+    'heavy',
+    'polished',
+    'quartz',
+    'amethyst',
+    'blazing',
+    'dark',
+    'ruby',
+    'marble',
+    'sapphire',
+    'gold',
+    'eternal',
+    'opal',
+    'moonstone',
+    'shining',
+    'topaz',
+    'silver',
+    'jade',
+    'floral',
+    'diamond',
+    'emerald',
+    'prismarine',
+    'pink diamond',
+    'titanium',
+    'black diamond',
+    'obsidian'
+];
