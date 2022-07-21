@@ -5,6 +5,9 @@
   "main": "main.js",
   "author": "Sameer Prakash",
   "license": "MIT",
+  "scripts": {
+    "compile": "tsc -p tsconfig.json"
+  },
   "dependencies": {
     "mongoose": "^6.4.4"
   },

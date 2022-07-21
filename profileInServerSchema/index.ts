@@ -43,6 +43,10 @@ const profileInServerSchema = new Schema<ProfileInServer>({
 	xp: {
 		type: Number,
 		default: 0
+	},
+	level: {
+		type: Number,
+		default: 0
 	}
 });
 

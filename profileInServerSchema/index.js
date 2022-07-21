@@ -36,6 +36,10 @@ const profileInServerSchema = new mongoose_1.Schema({
     xp: {
         type: Number,
         default: 0
+    },
+    level: {
+        type: Number,
+        default: 0
     }
 });
 exports.default = profileInServerSchema;

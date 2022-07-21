@@ -7,6 +7,7 @@ export interface ProfileInServer {
 	bannedFromConfessions: boolean;
 	logs?: Log[];
 	xp: number;
+	level: number;
 }
 
 export interface Log {
