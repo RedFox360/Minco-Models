@@ -46,6 +46,7 @@ const serverSchema = new Schema<ServerData>({
 		type: Number,
 		default: 0.65
 	},
+	levelRoles: { type: Map, of: Number },
 	starboard: {
 		channelID: String,
 		starAmount: { type: Number, default: 1 },

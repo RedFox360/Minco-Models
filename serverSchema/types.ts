@@ -30,6 +30,7 @@ export interface ServerData {
 	clean: boolean;
 	timezone: string;
 	globalXpMultipler: number;
+	levelRoles: Map<string, number>;
 	starboard?: {
 		channelID?: string;
 		starAmount: number;
