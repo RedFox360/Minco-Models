@@ -44,7 +44,7 @@ const serverSchema = new mongoose_1.Schema({
         type: Number,
         default: 0.65
     },
-    levelRoles: { type: Map, of: Number },
+    levelRoles: { type: Map, of: String },
     starboard: {
         channelID: String,
         starAmount: { type: Number, default: 1 },
