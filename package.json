@@ -9,7 +9,7 @@
     "compile": "tsc -p tsconfig.json"
   },
   "dependencies": {
-    "mongoose": "^6.4.4"
+    "mongoose": "^6.5.2"
   },
   "devDependencies": {
     "typescript": "^4.7.4"
