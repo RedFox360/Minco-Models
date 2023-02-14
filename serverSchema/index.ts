@@ -1,11 +1,11 @@
-import { Schema, model } from 'mongoose';
-import { AutoWarn, ServerData } from './types';
+import { Schema, model } from "mongoose";
+import { AutoWarn, ServerData } from "./types";
 
 const AutoWarn = new Schema<AutoWarn>({
 	warnAmount: Number,
 	divisible: Boolean,
 	punishment: String,
-	time: Number // for timeout only
+	time: Number, // for timeout only
 });
 const serverSchema = new Schema<ServerData>({
 	serverID: { type: String, require: true, unique: true },
@@ -15,12 +15,12 @@ const serverSchema = new Schema<ServerData>({
 	welcomeMessage: {
 		type: String,
 		default:
-			'Welcome to {server}, {mention}!\nYou are the {ord_member_count} member!'
+			"Welcome to {server}, {mention}!\nYou are the {ord_member_count} member!",
 	},
 	leaveMessage: {
 		type: String,
 		default:
-			'It seems {user_tag} has left us. We now have {member_count} members.'
+			"It seems {user_tag} has left us. We now have {member_count} members.",
 	},
 	sendBirthdays: { type: Boolean, default: true },
 	birthdayChannel: String,
@@ -31,7 +31,7 @@ const serverSchema = new Schema<ServerData>({
 	autowarns: [AutoWarn],
 	profanityPunishment: {
 		punishment: String,
-		time: Number // for timeout
+		time: Number, // for timeout
 	},
 	muteRole: String,
 	mainRole: String,
@@ -44,20 +44,21 @@ const serverSchema = new Schema<ServerData>({
 	mainLogChannelWebhookId: String,
 	globalXpMultipler: {
 		type: Number,
-		default: 0.65
+		default: 0.65,
 	},
 	levelRoles: { type: Map, of: String },
+	levelingOn: { type: Boolean, default: false },
 	starboard: {
 		channelID: String,
 		starAmount: { type: Number, default: 1 },
-		messages: { type: Map, of: String, default: {} }
+		messages: { type: Map, of: String, default: {} },
 	},
 	currentCaseNo: { type: Number, default: 0 },
 	clean: { type: Boolean, default: false },
 	timezone: {
 		type: String,
-		default: 'America/Los_Angeles'
-	}
+		default: "America/Los_Angeles",
+	},
 });
 
 export default serverSchema;

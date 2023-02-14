@@ -12,7 +12,7 @@ export interface ServerData {
 	silenceBans: boolean;
 	autowarns?: AutoWarn[];
 	profanityPunishment?: {
-		punishment: 'warn' | 'timeout' | 'ban' | 'kick';
+		punishment: "warn" | "timeout" | "ban" | "kick";
 		time?: number;
 	};
 	muteRole?: string;
@@ -30,7 +30,8 @@ export interface ServerData {
 	clean: boolean;
 	timezone: string;
 	globalXpMultipler: number;
-	levelRoles: Map<string, string>;
+	levelRoles?: Map<string, string>;
+	levelingOn: boolean;
 	starboard?: {
 		channelID?: string;
 		starAmount: number;
@@ -45,4 +46,4 @@ export interface AutoWarn {
 	time?: number; // for timeout only
 }
 
-export type AutoWarnPunishment = 'timeout' | 'kick' | 'ban';
+export type AutoWarnPunishment = "timeout" | "kick" | "ban";
