@@ -1,6 +1,7 @@
-import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 import { rodArray } from "./types.js";
 import type { Profile, ZooSchema } from "./types.js";
+const { Schema } = mongoose;
 
 const validOptions = (...options: any[]) => {
 	return v => {

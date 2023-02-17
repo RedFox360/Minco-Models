@@ -1,5 +1,6 @@
-import { Schema } from "mongoose";
+import mongoose from "mongoose";
 import { rodArray } from "./types.js";
+const { Schema } = mongoose;
 const validOptions = (...options) => {
     return v => {
         if (options.includes(v))

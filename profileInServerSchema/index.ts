@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 import { Log, MarketItem, ProfileInServer } from "./types.js";
-
+const { Schema } = mongoose;
 const validOptions = (...options: any[]) => {
 	return v => {
 		if (options.includes(v)) return v;
