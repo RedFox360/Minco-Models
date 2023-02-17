@@ -1,6 +1,6 @@
-import profileSchema from './profileSchema';
-import serverSchema from './serverSchema';
-import profileInServerSchema from './profileInServerSchema';
+import profileSchema from "./profileSchema/index.js";
+import serverSchema from "./serverSchema/index.js";
+import profileInServerSchema from "./profileInServerSchema/index.js";
 export default class ModelClient {
     connection;
     profileModel;
@@ -8,8 +8,8 @@ export default class ModelClient {
     profileInServerModel;
     constructor(connection) {
         this.connection = connection;
-        this.profileModel = connection.model('ProfileModels', profileSchema);
-        this.serverModel = connection.model('SeverModels', serverSchema);
-        this.profileInServerModel = connection.model('guildProfileModel', profileInServerSchema);
+        this.profileModel = connection.model("ProfileModels", profileSchema);
+        this.serverModel = connection.model("SeverModels", serverSchema);
+        this.profileInServerModel = connection.model("guildProfileModel", profileInServerSchema);
     }
 }

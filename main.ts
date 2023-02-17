@@ -1,10 +1,10 @@
-import profileSchema from './profileSchema';
-import serverSchema from './serverSchema';
-import profileInServerSchema from './profileInServerSchema';
-import { Connection, Model } from 'mongoose';
-import { Profile } from './profileSchema/types';
-import { ServerData } from './serverSchema/types';
-import { ProfileInServer } from './profileInServerSchema/types';
+import profileSchema from "./profileSchema/index.js";
+import serverSchema from "./serverSchema/index.js";
+import profileInServerSchema from "./profileInServerSchema/index.js";
+import { Connection, Model } from "mongoose";
+import { Profile } from "./profileSchema/types.js";
+import { ServerData } from "./serverSchema/types.js";
+import { ProfileInServer } from "./profileInServerSchema/types.js";
 export default class ModelClient {
 	public profileModel: Model<Profile, {}, {}, {}, any>;
 	public serverModel: Model<ServerData, {}, {}, {}, any>;
@@ -18,15 +18,15 @@ export default class ModelClient {
 
 	constructor(public connection: Connection) {
 		this.profileModel = connection.model(
-			'ProfileModels',
+			"ProfileModels",
 			profileSchema
 		);
 		this.serverModel = connection.model(
-			'SeverModels',
+			"SeverModels",
 			serverSchema
 		);
 		this.profileInServerModel = connection.model(
-			'guildProfileModel',
+			"guildProfileModel",
 			profileInServerSchema
 		);
 	}

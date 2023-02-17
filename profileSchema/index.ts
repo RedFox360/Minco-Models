@@ -1,6 +1,6 @@
-import { Schema, model } from 'mongoose';
-import { rodArray } from './types';
-import type { Profile, ZooSchema } from './types';
+import { Schema, model } from "mongoose";
+import { rodArray } from "./types.js";
+import type { Profile, ZooSchema } from "./types.js";
 
 const validOptions = (...options: any[]) => {
 	return v => {
@@ -11,7 +11,7 @@ const validOptions = (...options: any[]) => {
 
 const zooSchema = new Schema<ZooSchema>({
 	name: String,
-	emoji: String
+	emoji: String,
 });
 
 const profileSchema = new Schema<Profile>({
@@ -23,18 +23,18 @@ const profileSchema = new Schema<Profile>({
 	favs: {
 		food: String,
 		color: String,
-		animal: String
+		animal: String,
 	},
 	inventory: [String],
 	gems: [String],
 	fish: {
 		rod: {
 			type: String,
-			set: validOptions(...rodArray)
+			set: validOptions(...rodArray),
 		},
 		fishInventory: { type: Map, of: Number, default: {} },
-		biome: { type: String, default: 'ocean' },
-		xp: { type: Number, default: 0 }
+		biome: { type: String, default: "ocean" },
+		xp: { type: Number, default: 0 },
 	},
 	candyAmount: Number,
 	zoo: [zooSchema],
@@ -42,27 +42,27 @@ const profileSchema = new Schema<Profile>({
 	lastUsedWeekly: Number,
 	timezone: {
 		type: String,
-		default: 'America/Los_Angeles'
+		default: "America/Los_Angeles",
 	},
 	battleSystem: {
 		emeralds: { type: Number, default: 10 },
 		penguin: {
 			type: String,
 			set: validOptions(
-				'warrior',
-				'magician',
-				'medic',
-				'ninja',
-				'archer'
-			)
+				"warrior",
+				"magician",
+				"medic",
+				"ninja",
+				"archer"
+			),
 		},
 		battleShield: {
 			type: Boolean,
-			default: true
+			default: true,
 		},
 		penguinName: String,
-		xp: { type: Number, default: 0 }
-	}
+		xp: { type: Number, default: 0 },
+	},
 });
 
 export default profileSchema;

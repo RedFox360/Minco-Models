@@ -1,4 +1,4 @@
-import { Schema } from 'mongoose';
+import { Schema } from "mongoose";
 const validOptions = (...options) => {
     return v => {
         if (options.includes(v))
@@ -10,18 +10,18 @@ const validOptions = (...options) => {
 const marketSchema = new Schema({
     price: Number,
     name: String,
-    desc: String
+    desc: String,
 });
 const logSchema = new Schema({
     type: {
         type: String,
-        set: validOptions('Warn', 'Timeout', 'End Timeout', 'Kick', 'Ban')
+        set: validOptions("Warn", "Timeout", "End Timeout", "Kick", "Ban"),
     },
     time: Number,
     case: Number,
     date: Date,
     reason: String,
-    moderator: String
+    moderator: String,
 });
 const profileInServerSchema = new Schema({
     userID: { type: String, require: true },
@@ -33,11 +33,11 @@ const profileInServerSchema = new Schema({
     logs: [logSchema],
     xp: {
         type: Number,
-        default: 0
+        default: 0,
     },
     level: {
         type: Number,
-        default: 0
-    }
+        default: 0,
+    },
 });
 export default profileInServerSchema;

@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { AutoWarn, ServerData } from "./types";
+import { AutoWarn, ServerData } from "./types.js";
 
 const AutoWarn = new Schema<AutoWarn>({
 	warnAmount: Number,

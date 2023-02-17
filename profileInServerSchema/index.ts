@@ -1,5 +1,5 @@
-import { Schema, model } from 'mongoose';
-import { Log, MarketItem, ProfileInServer } from './types';
+import { Schema, model } from "mongoose";
+import { Log, MarketItem, ProfileInServer } from "./types.js";
 
 const validOptions = (...options: any[]) => {
 	return v => {
@@ -11,25 +11,25 @@ const validOptions = (...options: any[]) => {
 const marketSchema = new Schema<MarketItem>({
 	price: Number,
 	name: String,
-	desc: String
+	desc: String,
 });
 
 const logSchema = new Schema<Log>({
 	type: {
 		type: String,
 		set: validOptions(
-			'Warn',
-			'Timeout',
-			'End Timeout',
-			'Kick',
-			'Ban'
-		)
+			"Warn",
+			"Timeout",
+			"End Timeout",
+			"Kick",
+			"Ban"
+		),
 	},
 	time: Number,
 	case: Number,
 	date: Date,
 	reason: String,
-	moderator: String
+	moderator: String,
 });
 
 const profileInServerSchema = new Schema<ProfileInServer>({
@@ -42,12 +42,12 @@ const profileInServerSchema = new Schema<ProfileInServer>({
 	logs: [logSchema],
 	xp: {
 		type: Number,
-		default: 0
+		default: 0,
 	},
 	level: {
 		type: Number,
-		default: 0
-	}
+		default: 0,
+	},
 });
 
 export default profileInServerSchema;
