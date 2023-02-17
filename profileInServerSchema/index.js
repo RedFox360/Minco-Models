@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = require("mongoose");
+import { Schema } from 'mongoose';
 const validOptions = (...options) => {
     return v => {
         if (options.includes(v))
@@ -9,12 +7,12 @@ const validOptions = (...options) => {
             return options[0];
     };
 };
-const marketSchema = new mongoose_1.Schema({
+const marketSchema = new Schema({
     price: Number,
     name: String,
     desc: String
 });
-const logSchema = new mongoose_1.Schema({
+const logSchema = new Schema({
     type: {
         type: String,
         set: validOptions('Warn', 'Timeout', 'End Timeout', 'Kick', 'Ban')
@@ -25,7 +23,7 @@ const logSchema = new mongoose_1.Schema({
     reason: String,
     moderator: String
 });
-const profileInServerSchema = new mongoose_1.Schema({
+const profileInServerSchema = new Schema({
     userID: { type: String, require: true },
     serverID: { type: String, require: true },
     market: [marketSchema],
@@ -42,4 +40,4 @@ const profileInServerSchema = new mongoose_1.Schema({
         default: 0
     }
 });
-exports.default = profileInServerSchema;
+export default profileInServerSchema;

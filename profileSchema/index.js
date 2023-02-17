@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = require("mongoose");
-const types_1 = require("./types");
+import { Schema } from 'mongoose';
+import { rodArray } from './types';
 const validOptions = (...options) => {
     return v => {
         if (options.includes(v))
@@ -10,11 +8,11 @@ const validOptions = (...options) => {
             return options[0];
     };
 };
-const zooSchema = new mongoose_1.Schema({
+const zooSchema = new Schema({
     name: String,
     emoji: String
 });
-const profileSchema = new mongoose_1.Schema({
+const profileSchema = new Schema({
     userID: { type: String, require: true, unique: true },
     mincoDollars: { type: Number, default: 100 },
     bank: { type: Number, default: 0 },
@@ -30,7 +28,7 @@ const profileSchema = new mongoose_1.Schema({
     fish: {
         rod: {
             type: String,
-            set: validOptions(...types_1.rodArray)
+            set: validOptions(...rodArray)
         },
         fishInventory: { type: Map, of: Number, default: {} },
         biome: { type: String, default: 'ocean' },
@@ -58,4 +56,4 @@ const profileSchema = new mongoose_1.Schema({
         xp: { type: Number, default: 0 }
     }
 });
-exports.default = profileSchema;
+export default profileSchema;

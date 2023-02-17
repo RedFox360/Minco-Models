@@ -1,13 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose_1 = require("mongoose");
-const AutoWarn = new mongoose_1.Schema({
+import { Schema } from "mongoose";
+const AutoWarn = new Schema({
     warnAmount: Number,
     divisible: Boolean,
     punishment: String,
     time: Number, // for timeout only
 });
-const serverSchema = new mongoose_1.Schema({
+const serverSchema = new Schema({
     serverID: { type: String, require: true, unique: true },
     bannedPeople: [String],
     blacklist: [String],
@@ -58,4 +56,4 @@ const serverSchema = new mongoose_1.Schema({
         default: "America/Los_Angeles",
     },
 });
-exports.default = serverSchema;
+export default serverSchema;

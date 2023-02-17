@@ -5,6 +5,7 @@
   "main": "main.js",
   "author": "Sameer Prakash",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "compile": "tsc -p tsconfig.json"
   },

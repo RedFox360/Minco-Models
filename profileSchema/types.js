@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.rodArray = void 0;
-exports.rodArray = [
+export const rodArray = [
     'wooden',
     'bone',
     'candle',
